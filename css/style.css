@@ -1,0 +1,90 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-bg {
+  background-color: #000000;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /*Foi usado um gap para quebrar mais cedo, para nao ficarem muito juntos, e cria um entre os elementos quando for quebrado a tela*/
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /*faz com que o valor do padding não some com o valor do max-width: 1200; */
+  padding: 20px;
+  max-width: 1200px; /*ja conta com o valor do padding incluso*/
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.header-menu a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 16px 0px; /*Usado para aumentar a area de contato dos links do menu, padding foi so para cima e para baixo*/
+  font-size: 18px;
+  position: relative; /*para que o after hover, cubra apenas os itens do pai, o pai sera o item do menu (relative), e o after sendo absolute*/
+}
+
+.header-menu a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #ffffff;
+  margin-top: 4px;
+  transition: 0.3s; /*valor ideal da animação*/
+  position: absolute; /*para tirar o after do fluxto html*/
+}
+
+.header-menu a:hover:after {
+    width: 100%;    /*sobrinhado completo de fora a fora*/
+}
+
+@media (max-width: 800px) {
+  .header-menu {
+    gap: 20px;
+  }
+
+  .header-menu a {
+    background: #111111;
+    padding: 12px 16px;
+    border-radius: 4px;
+  }
+
+  .header-menu a:hover {
+    background-color: #2e2e2e;
+  }
+  .header a:after{
+      display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-menu {
+    gap: 12px;
+  }
+
+  .header-menu a {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
