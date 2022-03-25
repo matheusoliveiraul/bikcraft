@@ -24,10 +24,7 @@
 .header-menu a {
   display: inline-block;
   padding: 16px 0px; /*Usado para aumentar a area de contato dos links do menu, padding foi so para cima e para baixo*/
-  font-size: 18px;
   position: relative; /*para que o after hover, cubra apenas os itens do pai, o pai sera o item do menu (relative), e o after sendo absolute*/
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
 }
 
 .header-menu a:after {
