@@ -27,7 +27,7 @@
   position: relative; /*para que o after hover, cubra apenas os itens do pai, o pai sera o item do menu (relative), e o after sendo absolute*/
 }
 
-.header-menu a:after {
+.header-menu a::after {
   content: "";
   display: block;
   height: 2px;
@@ -38,7 +38,7 @@
   position: absolute; /*para tirar o after do fluxto html*/
 }
 
-.header-menu a:hover:after {
+.header-menu a:hover::after {
   width: 100%; /*sobrinhado completo de fora a fora*/
 }
 
@@ -56,7 +56,7 @@
   .header-menu a:hover {
     background-color: var(--cor-10);
   }
-  .header a:after {
+  .header a::after {
     display: none;
   }
 }
