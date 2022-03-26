@@ -8,11 +8,8 @@
   gap: 20px; /*Foi usado um gap para quebrar mais cedo, para nao ficarem muito juntos, e cria um entre os elementos quando for quebrado a tela*/
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-box; /*faz com que o valor do padding não some com o valor do max-width: 1200; */
-  padding: 20px;
-  max-width: 1200px; /*ja conta com o valor do padding incluso*/
-  margin-left: auto;
-  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header-menu {
