@@ -1,5 +1,5 @@
 .bicicletas-bg {
-  background-color: var(--cor-11);
+  background-image: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
 }
 
 .bicicletas {
@@ -35,15 +35,15 @@
 }
 
 .bicicletas h2,
-.bicicletas p{
+.bicicletas p {
   grid-column: 1/-1;
 }
 
-.bicicletas h2{
+.bicicletas h2 {
   margin-bottom: 20px;
 }
 
-.bicicletas h2::before{
+.bicicletas h2::before {
   content: "";
   display: block;
   width: 12px;
@@ -52,25 +52,51 @@
   margin-bottom: 8px;
 }
 
-.bicicletas p{
+.bicicletas p {
   margin-bottom: 32px;
 }
 
-.bicicletas a{
+.bicicletas a {
   place-self: end;
 }
 
-.bicicletas li{
+.bicicletas li {
   display: flex;
   align-items: center;
 }
 
-.bicicletas ul{
+.bicicletas ul {
   display: grid;
   gap: 16px;
 }
 
-.bicicletas-conteudo img{
+.bicicletas-conteudo img {
   width: 24px;
   margin: 8px;
+}
+
+@media (max-width: 800px) {
+  .bicicletas-bg {
+    background: var(--cor-11);
+  }
+  .bicicletas {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bicicletas-conteudo{
+    grid-template-columns: 1fr;
+  }
+  .bicicletas ul{
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+  }
+  .bicicletas a{
+    place-self: start;
+  }
 }
