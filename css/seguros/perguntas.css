@@ -1,30 +1,35 @@
-.perguntas{
+.perguntas {
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
-.perguntas h2{
+.perguntas h2 {
   margin-bottom: 60px;
 }
 
-.perguntas dl > div{ /*Para falar com a div dentro da dl*/
+.perguntas dl > div {
+  /*Para falar com a div dentro da dl*/
   padding: 20px;
   border-radius: 4px;
 }
 
-.perguntas dl > div:nth-child(odd){
+.perguntas dl > div:nth-child(odd) {
   background-color: var(--cor-1);
 }
 
-.perguntas dt{
+.perguntas button {
   display: grid;
   grid-template-columns: auto 1fr auto; /*Muito legal pois deixa o primeiro em auto para crescer ate o seu tamanho, o segundo cresce ate o quando da e o ultimo é igual o primeiro*/
   align-items: center;
   gap: 8px;
   cursor: pointer;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
 }
 
-.perguntas dt::before{
+.perguntas button::before {
   content: "";
   display: inline-block;
   width: 12px;
@@ -32,7 +37,7 @@
   background-color: var(--cor-p1);
 }
 
-.perguntas dt::after{
+.perguntas button::after {
   content: "";
   display: inline-block;
   width: 14px;
@@ -41,22 +46,31 @@
   transition: 0.3s;
 }
 
-.perguntas dt:hover::after{
+.perguntas button:hover::after,
+.perguntas button[aria-expanded="true"]::after {
   transform: rotate(180deg);
 }
 
-.perguntas dd{
+.perguntas dd {
+  display: none;
+}
+
+.perguntas dd.ativa {
+  display: block;
+}
+
+.perguntas dd {
   padding-left: 20px;
   padding-top: 16px;
   max-width: 80ch;
 }
 
-@media (max-width: 800px){
-  .perguntas{
+@media (max-width: 800px) {
+  .perguntas {
     padding-top: 60px;
     padding-bottom: 60px;
   }
-  .perguntas h2{
+  .perguntas h2 {
     margin-bottom: 40px;
   }
 }
